@@ -1,0 +1,31 @@
+---
+- name: Activity4 Playbook
+  hosts: all
+
+  tasks:
+    - name: OpenStack-Ansible and Boto Installation
+      pip:
+        name:
+          - ansible
+          - boto
+          - python-openstackclient
+
+- name: CentOS Installation
+  hosts: centos
+
+  tasks:
+    - name: Java Installation
+      yum: 
+        name: java-1.8.0-openjdk
+        state: present
+        update_cache: yes
+
+- name: Ubuntu Installation
+  hosts: ubuntu
+
+  tasks:
+    - name: Ubuntu Default
+      apt:
+        name: default-jre
+        state: present
+        update_cache: yes
