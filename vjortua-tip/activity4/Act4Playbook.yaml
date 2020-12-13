@@ -25,6 +25,7 @@
 
   tasks:
     - name: Ubuntu Default
+      become: yes
       apt:
         name: default-jre
         state: present
