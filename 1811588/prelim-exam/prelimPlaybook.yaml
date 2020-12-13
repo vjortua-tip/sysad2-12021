@@ -1,0 +1,28 @@
+---
+- name: Prelim Exam Playbook
+  hosts: all
+
+  tasks:
+    - name: Variable
+      include_vars:
+        file: config.yaml
+
+- name: Python
+  hosts: all
+  roles:
+    - installpy
+
+- name: Java 
+  hosts: all
+  roles:
+    - installjava
+
+- name: Change MOTD
+  hosts: all
+  roles:
+    - changemotd
+
+- name: Create User
+  hosts: all
+  roles:
+    - createuser
