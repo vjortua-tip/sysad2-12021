@@ -7,22 +7,10 @@
       include_vars:
         file: config.yaml
 
-- name: Python
-  hosts: all
+- name: Ansible Roles
+  hosts: ubuntu
   roles:
     - installpy
-
-- name: Java 
-  hosts: all
-  roles:
     - installjava
-
-- name: Change MOTD
-  hosts: all
-  roles:
     - changemotd
-
-- name: Create User
-  hosts: all
-  roles:
     - createuser
