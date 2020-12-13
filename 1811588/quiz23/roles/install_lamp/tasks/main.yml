@@ -1,7 +1,7 @@
 ---
 # tasks file for roles/install_lamp
 
-- name: Apache2 Installation
+- name: Run Apache2 
   become: yes
   become_user: root
   service:
@@ -9,7 +9,7 @@
     state: started
     enabled: yes
 
-- name: MySQL Installation
+- name: Run MySQL
   become: yes
   become_user: root
   service:
@@ -20,7 +20,7 @@
 - name: Directory
   file: path=/var/www/html state=directory mode=0755
 
-- name: HTML Installation
+- name: Run HTML
   become: yes
   become_user: root
   copy:
