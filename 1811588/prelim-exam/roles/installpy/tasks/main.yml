@@ -3,18 +3,19 @@
 
 ### Role 1 (python);
 - name: Latest python3 and pip3 Installation
-  become: yes
   apt:
-    name: Python
-      - python3
-      - python3-pip
-    state: present
-    update_cache: yes
+    name: python3
+    state: latest
 
-- name: pip3 as Default Pip
-  become: yes
-  command: update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+- name: Python3-pip
+  apt:
+    name: python3-pip
+    state: latest
 
-- name: python3 as Default Python
+- name: Default python3
   become: yes
-  command: echo "alias python='python3'" >> .bashrc && source .bashrc
+  command: update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
+- name: Default python3-pip
+  become: yes
+  command: update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10
