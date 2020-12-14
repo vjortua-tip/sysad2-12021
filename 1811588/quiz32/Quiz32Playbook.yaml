@@ -1,2 +1,43 @@
 ---
-- name: 
+- name: Httpd Server Installation and Configuration
+  hosts: ubuntu
+
+  tasks:
+    - name: Apache2 Installation
+      apt:
+        name: apache2
+        state: latest
+        update_cache: yes
+
+- name: HTML file
+  copy:
+    src: index.html
+    dest: /var/www/html
+    owner: www-data
+    group: www-data
+    mode: '0644'
+
+- name: Enable httpd
+  service: 
+    name: apache2
+    enabled: yes
+
+  notify: 
+  - start apache
+  - setup firewalld
+  - reload firewalld
+
+handlers:
+  - name: Apache
+    service: 
+      name: apache2
+      state: started
+- name: Firewall Setup
+  firewalld:
+    service: http
+    permanent: True
+    state: enabled
+- name: Firewall Reload
+  service: 
+    name: firewalld
+    state: restarted
