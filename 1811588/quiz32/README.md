@@ -1,4 +1,14 @@
-## Quiz 3.2
+## Quiz 3.2 
 
-#### Directory Summary
+### Directory Summary
++ Inventory:
+  - Quiz32Inv
 
++ Playbook:
+  - Quiz32Playbook.yaml
+
++ Ansible:
+  - ansible.cfg
+
++ Html:
+  - index.html
