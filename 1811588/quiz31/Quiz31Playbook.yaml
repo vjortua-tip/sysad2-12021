@@ -20,6 +20,7 @@
         name: vyanneortua
         comment: "Vyanne Ortua"
         password: $5$zKe901Eq7XYevTDs$9odqKn2XllJsjupgBnodxu8Hm5K9B/Ys4aSkqDvhxl.
+
     - name: append DenyUsers vyanneortua
       lineinfile:
         path: /etc/ssh/sshd_config
