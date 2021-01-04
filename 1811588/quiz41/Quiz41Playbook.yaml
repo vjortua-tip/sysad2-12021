@@ -3,5 +3,5 @@
   hosts: ubuntu
   roles:
     - nagiosins
-    - nagiosconf
     - nagiosplug
+    - nagiosconf
