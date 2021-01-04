@@ -6,7 +6,7 @@
     remote_src: yes
 
 - name: Nagios Shell 
-  shell: ./configure --with-command-group=nagcmd --with-command-group=nagcmd --with-httpd_conf=/etc.apache2/sites-enabled/
+  shell: ./configure --with-command-group=nagcmdgrp --with-command-group=nagcmdgrp --with-httpd_conf=/etc.apache2/sites-enabled/
   args:
     chdir: /downloads/nagios-4.2.1
 
