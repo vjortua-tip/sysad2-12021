@@ -2,14 +2,14 @@
 - name: Pre-reqs for Elastic Search
   apt:
     name:
+      - openjdk-8-jdk
       - nginx
-      - openjdk-11-jdk
     state: latest
     update_cache: yes
 
 - name: Packages for Elastic
   apt_key:
-    url: "https://packages.elastic.com/GPG-KEY-elasticsearch"
+    url: "https://packages.elastic.co/GPG-KEY-elasticsearch"
     state: present
 
 - name: Apt 
