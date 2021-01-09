@@ -10,10 +10,10 @@
   args:
     chdir: /tmp/nagios-4.4.6
 
-- name: Nagios Clean
+- name: Nagios All
   make:
     chdir: /tmp/nagios-4.4.6
-    target: clean
+    target: all
 
 - name: Nagios Install
   make:
@@ -43,11 +43,15 @@
 - name: Nagios User Acc
   htpasswd:
     path: /usr/local/nagios/etc/htpasswd.users
-    name: "{{ vyanneortua }}"
+    name: "{{ username }}"
     password: "{{ password }}"
 
 - name: Cgi command
   command: a2enmod cgi
+
+- name: Reload
+  systemd:
+    daemon_reload: yes
 
 - name: Apache2 Restart
   service:
