@@ -41,16 +41,14 @@
     regexp: 'http.port'
     line: 'http.port: 9200'
 
-- name: Timeout
-  lineinfile:
-    dest: /etc/systemd/system/elasticsearch.service
-    regexp: 'TimeoutStartSec = '
-    line: 'TimeoutStartSec = 900'
-
 - name: Discovery Type
   lineinfile:
     dest: /etc/elasticsearch/elasticsearch.yml
     line: 'discovery.type: "single-node"'
+
+- name: Reload
+  systemd: 
+    daemon_reload: yes
 
 - name: Elastic Search Start
   service:
