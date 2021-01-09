@@ -65,6 +65,12 @@
   lineinfile:
     dest: /etc/kibana/kibana.yml
     regexp: 'server.host'
+    line: 'server.host: localhost'
+
+- name: Server Port
+  lineinfile:
+    dest: /etc/kibana/kibana/yml
+    regexp: 'server.port:'
     line: 'server.port: 5601'
 
 - name: Hosts
