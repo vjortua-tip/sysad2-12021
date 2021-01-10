@@ -1,6 +1,6 @@
 ---
 - name: FTP Server Installation
-  yume:
+  yum:
     name: vsftpd
     state: latest
     update_cache: yes

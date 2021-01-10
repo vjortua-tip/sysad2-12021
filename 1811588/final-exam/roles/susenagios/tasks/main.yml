@@ -33,7 +33,7 @@
   user:
     name: nagios
     comment: nagios user
-  group: nagadmingrp
+    group: nagadmingrp
 
 - name: WWWrun for External Command
   user:

@@ -30,7 +30,7 @@
     shell: /bin/bash
     comment: nagios user
     group: nagiosgrp
-    password '{{ naguser_pass }}'
+    password: '{{ naguser_pass }}'
 
 - name: Nagios group for External Command
   user:
