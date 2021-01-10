@@ -10,7 +10,6 @@
     - nagios2ins
     - nagios3ins
     - grafana1ins
-    - lamp1ins
 
 - name: Installation in Centos
   hosts: centos
@@ -18,4 +17,3 @@
   roles:
     - elasticstack2ins
     - grafana2ins
-    - lamp2ins
