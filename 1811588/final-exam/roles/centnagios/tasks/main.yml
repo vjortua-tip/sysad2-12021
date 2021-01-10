@@ -9,9 +9,9 @@
       - httpd
       - perl
       - postfix
-      - unfix
+      - unzip
     state: latest
-    udpate_cache: yes
+    update_cache: yes
 
 - name: Httpd Start
   service:
