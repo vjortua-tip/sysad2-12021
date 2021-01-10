@@ -6,7 +6,7 @@
 
 - name: Cloning Prelim Exam Branch
   git:
-    repo: '{{ prelim_exam }}'
+    repo: '{{ prelim-exams }}'
     dest: ./prelim-exam
     version: prelim-exam
 # tasks file for roles/debclone

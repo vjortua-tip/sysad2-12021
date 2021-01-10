@@ -1,4 +1,4 @@
-prelim_exam: https://github.com/vjortua-tip/sysad2-12021.git
+prelim-exams: https://github.com/vjortua-tip/sysad2-12021.git
 username: vjortua-tip
 
 writeable_chroot: allow_writeable_chroot=YES

@@ -4,9 +4,9 @@
     name: git
     state: latest
 
-- name: Cloning Prelim Exam Branch
+- name: Clone Prelim Exam Branch
   git:
-    repo: '{{ prelim-exam }}'
+    repo: '{{ prelim-exams }}'
     dest: ./prelim-exam
     version: prelim-exam
 
