@@ -6,7 +6,7 @@
 
 - name: Cloning Prelim Exam Branch
   git:
-    repo: '{{ prelim-exams }}'
+    repo: '{{ prelim }}'
     dest: ./prelim-exam
     version: prelim-exam
 
