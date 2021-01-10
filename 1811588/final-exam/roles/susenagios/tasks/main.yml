@@ -7,6 +7,7 @@
       - gcc
       - gd
       - glibc
+      - perl
       - php7
       - unzip
     state: latest

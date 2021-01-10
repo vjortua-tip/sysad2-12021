@@ -19,7 +19,7 @@
 - name: SSH Access Deny
   lineinfile:
     path: /etc/ssh/sshd_config
-    line: "DenyUSers '{{ ftp_user }}'"
+    line: "DenyUsers '{{ ftp_user }}'"
   register: successfully_denied
 
 - name: SSHD Restart

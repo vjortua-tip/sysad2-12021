@@ -25,7 +25,7 @@
 
 - name: Nagcmd Group
   group:
-    name: nagcmd
+    name: nagcmdgrp
     state: present
 
 - name: Nagios User
@@ -67,7 +67,7 @@
 - name: Nagios Core Extraction
   unarchive:
     src: /downloads/nagios-4.2.1.tar.gz
-    dest: /downlaods
+    dest: /downloads
     remote_src: yes
 
 - name: Host Directory
@@ -135,7 +135,7 @@
   htpasswd:
     path: /usr/local/nagios/etc/htpasswd.users
     name: nagiosadmin
-    password: '{{nagadmin_pass }}'
+    password: '{{ nagadmin_pass }}'
 
 - name: Httpd Restart
   service:
